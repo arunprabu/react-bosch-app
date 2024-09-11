@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+/*
+  Skeleton of a component
+    * imports (optional)
+    * component defn 
+       must return JSX
+    * export 
+*/
 import './App.css';
+import Header from './layouts/Header';
 
+// component defn
 function App() {
+  // must return JSX
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <h1>Success!</h1>
     </div>
   );
 }

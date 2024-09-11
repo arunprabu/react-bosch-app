@@ -1,5 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// node_modules import
+import React from 'react'; // official react core library 
+import ReactDOM from 'react-dom/client'; // official react dom library - for working with the DOM.
+
+// custom imports
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
