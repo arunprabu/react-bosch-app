@@ -64,7 +64,7 @@ Component in ReactJS
     1. Functional Components [RECOMMENDED]
       1.1 Functional Component with Named Function
       1.2 Functional Component with Anonymous Function
-      1.3 Functional Component with Arrow Function
+      1.3 Functional Component with Arrow Function [RECOMMENDED]
 
     2. Class Components [NEVER EVER WRITE IT - NOT RECOMMENDED]
 
@@ -134,7 +134,102 @@ Thinking in ReactJS
   Choices in UI Library 
     1. Material UI 
     2. Bootstrap [Chosen]
+      2.1 raw bootstrap 
+      2.2 react-bootstrap
+      2.3 reactstrap
     3. Ant Design
     4. Tailwind CSS 
 
 ======
+
+
+
+=====
+Project Structure 
+-----
+  src/
+    layouts/
+      Header.tsx 
+      Footer.tsx 
+    components/
+    pages/
+      Home.tsx
+    App.tsx 
+    App.css 
+    App.test.tsx 
+    index.tsx 
+    index.css
+
+
+Limitations of JSX 
+======
+  1. JSX elements must be closed. either with a self-closing tag or with a closing tag.
+  2. JSX elements can't have class attribute. replace it with className.
+
+
+Core Concepts of ReactJS
+-----
+  1. Props 
+  2. States
+  3. Events 
+  4. Conditional Rendering 
+  5. Lists & Keys 
+
+====
+
+Characteristics of SPA
+  1. Pages should NOT Refresh [DONE]
+  2. URL should change [DONE]
+  3. History should be maintained w/o page refresh  [DONE]
+  4. Header and Footer should NOT be loaded again and again  [DONE]
+  5. The section in b/w Header and Footer should show contextual updates [DONE]
+  6. Active Menu should be set [TODO]
+  7. Page Title should be updated [TODO]
+
+using react-router-dom 
+
+Routing 
+=====
+  Step 0: Install react-router-dom
+    npm install react-router-dom
+
+  Step 1: Identify the urls for the menus
+    1. Home                       url: '/'
+    2. Netflix                    url: '/netflix'
+    3. Employee Manager App       url: '/employee-manager'
+    4. Products                   url: '/products'
+    5. Todos                      url: '/todos'
+    6. About                      url: '/about'
+    7. Contact                    url: '/contact'
+
+  Step 2: Creating the components for the urls 
+    src/
+      pages/
+        HomePage.tsx 
+        NetflixPage.tsx
+        EmployeeManagerPage.tsx
+        ProductsPage.tsx
+        TodosPage.tsx
+        AboutPage.tsx
+        ContactPage.tsx
+
+  Step 3: Configure the routes in App.tsx
+    and also put the whole app under BrowserRouter
+
+  Step 4: Check the app. Pages will refresh. Let's fix it. 
+    Goto MenuList.tsx 
+    replace all a href with Link to 
+
+
+=====
+Cross Component Communication
+------
+  1. Parent Component to Child Component Communication
+      using Props  
+
+  2. Child Component to Parent Component Communication
+      using Props, states, events and callback function
+
+  3. Any Component to Any Component Communication
+      3.1 using React Context API (or)
+      3.2 using Redux-Toolkit / zustand / recoil / mobx
