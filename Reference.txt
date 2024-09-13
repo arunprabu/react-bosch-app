@@ -169,11 +169,11 @@ Limitations of JSX
 
 Core Concepts of ReactJS
 -----
-  1. Props 
-  2. States
-  3. Events 
-  4. Conditional Rendering 
-  5. Lists & Keys 
+  1. Props [DONE]
+  2. States [DONE]
+  3. Events [DONE]
+  4. Conditional Rendering [DONE]
+  5. Lists & Keys [DONE]
 
 ====
 
@@ -224,12 +224,17 @@ Routing
 =====
 Cross Component Communication
 ------
-  1. Parent Component to Child Component Communication
+  1. Parent Component to Child Component Communication [DONE]
       using Props  
 
-  2. Child Component to Parent Component Communication
+  2. Child Component to Parent Component Communication [DONE]
       using Props, states, events and callback function
 
   3. Any Component to Any Component Communication
       3.1 using React Context API (or)
       3.2 using Redux-Toolkit / zustand / recoil / mobx
+
+
+Demo Two Way Binding 
+-----
+  

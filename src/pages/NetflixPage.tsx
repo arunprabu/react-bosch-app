@@ -1,4 +1,6 @@
 import LatestShowList from "../components/netflix/LatestShowList";
+import RecommendedShowList from "../components/netflix/RecommendedShowList";
+import TrendingShowList from "../components/netflix/TrendingShowList";
 
 const NetflixPage = () => {
   return (
@@ -14,9 +16,19 @@ const NetflixPage = () => {
         <h2>Latest Shows | Props Demo</h2>
         <LatestShowList />
       </div>
+
+      <div className="mt-5 pt-2">
+        <hr />
+        <h2>Trending Shows | States, Events Demo</h2>
+        <TrendingShowList />
+      </div>
+
+      <div className="mt-5 pt-2">
+        <hr />
+        <h2>Recommended Shows | States, Events, Conditional Rendering, Lists & Keys Demo</h2>
+        <RecommendedShowList />
+      </div>
     </div>
-
-
   );
 };
 
