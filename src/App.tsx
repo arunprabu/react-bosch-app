@@ -16,6 +16,8 @@ import ProductsPage from './pages/ProductsPage';
 import TodosPage from './pages/TodosPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import AddEmployee from './components/employee-manager/AddEmployee';
+import EmployeeDetails from './components/employee-manager/EmployeeDetails';
 
 // component defn
 function App() {
@@ -29,7 +31,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/netflix" element={<NetflixPage />} />
-          <Route path="/employee-manager" element={<EmployeeManagerPage />} />
+          {/* Learn about Nested Routing and implement */} 
+          <Route path="/employee-manager/" element={<EmployeeManagerPage />} />
+          <Route path="/employee-manager/add" element={<AddEmployee />} />
+          <Route path="/employee-manager/1" element={<EmployeeDetails />} />
+          
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/todos" element={<TodosPage />} />
           <Route path="/about" element={<AboutPage />} />

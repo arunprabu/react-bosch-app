@@ -246,3 +246,30 @@ Demo of Styles
 Demo Two Way Binding 
 -----
   * controlled component -- 
+
+
+CRUD App
+----
+  * Add Employee
+      localhost:3000/employee-manager/add
+      HTTP Method: POST
+
+  * List Employees
+      localhost:3000/employee-manager/
+      HTTP Method: GET
+
+  * Employee Details
+      localhost:3000/employee-manager/1
+      localhost:3000/employee-manager/32456
+
+      HTTP Method: GET
+
+  * Update Employee [TODO]
+      localhost:3000/employee-manager/32456   (Bootstrap Modal) -- or else 
+      localhost:3000/employee-manager/32456/edit   (Bootstrap Modal)
+
+      HTTP Method: PUT / PATCH 
+  
+  * Delete Employee [TODO]
+      localhost:3000/employee-manager/32456/   (Bootstrap Modal)
+      HTTP Method: DELETE
