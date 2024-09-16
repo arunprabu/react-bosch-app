@@ -1,7 +1,35 @@
 const AboutPage = () => {
-  return (
-    <div>AboutPage</div>
-  )
-}
+  // Internal Styles
+  const myButtonStyle = {
+    color: "#fff",
+    fontSize: "20px",
+    fontWeight: "bold",
+    backgroundColor: "purple",
+    border: "none",
+    padding: "10px 20px",
+    marginRight: "10px"
+  };
 
-export default AboutPage
+  return (
+    <div>
+      <h1>About Us</h1>
+      {/* Inline Styles */}
+      <p
+        style={{
+          color: "green",
+          fontSize: "20px",
+          fontWeight: "bold",
+        }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+        quidem.
+      </p>
+
+      {/* Internal Styles  */}
+      <button style={myButtonStyle}>Subscibe Monthly Plan</button>
+      <button style={myButtonStyle}>Subscribe Annual Plan</button>
+    </div>
+  );
+};
+
+export default AboutPage;

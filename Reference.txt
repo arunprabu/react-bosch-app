@@ -90,6 +90,7 @@ Casing Types
       * Recommended for variables, const, functions, methods in JS & TS 
       * Recommended for id's of html elements 
       * Recommended for variables, const, fn, methods, event handlers of React Component
+      * Recommended for CSS classes if you are using CSS Modules in react app
       
       examples 
       -----
@@ -165,6 +166,8 @@ Limitations of JSX
 ======
   1. JSX elements must be closed. either with a self-closing tag or with a closing tag.
   2. JSX elements can't have class attribute. replace it with className.
+  3. JSX elements can have style attribute with objects in styles 
+
 
 
 Core Concepts of ReactJS
@@ -234,7 +237,12 @@ Cross Component Communication
       3.1 using React Context API (or)
       3.2 using Redux-Toolkit / zustand / recoil / mobx
 
+Demo of Styles 
+------
+  * external styles [DONE]
+  * internal styles 
+  * inline styles
 
 Demo Two Way Binding 
 -----
-  
+  * controlled component -- 

@@ -3,7 +3,7 @@ const HomePage = () => {
     <div className="container my-5">
       <div className="p-5 text-center bg-body-tertiary rounded-3">
         <h1 className="text-body-emphasis">Welcome to React Bosch App</h1>
-        <p className="col-lg-8 mx-auto fs-5 text-muted">
+        <p className="col-lg-8 mx-auto fs-5 purpleText">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum nihil
           adipisci perferendis unde architecto quisquam blanditiis commodi
           assumenda nisi sit quae, ducimus vero exercitationem deserunt

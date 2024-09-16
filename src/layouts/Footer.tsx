@@ -5,7 +5,7 @@
        must return JSX
     * export 
 */
-
+import styles from "./Footer.module.css";
 import MenuList from "./MenuList";
 
 // Functional Component with Anonymous Function
@@ -17,7 +17,8 @@ const Footer = function() {
     <footer className="text-center">
       <hr />
       <MenuList />
-      <p>Copyright {copyrightYear} | Bosch</p>      
+      <p className={styles.purpleText}>Copyright {copyrightYear} | Bosch</p>
+      <p className={styles.greenText}>Happily made in India</p>
     </footer>
   );
 }

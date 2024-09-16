@@ -5,7 +5,7 @@
        must return JSX
     * export 
 */
-import './App.css';
+import './App.css'; 
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
