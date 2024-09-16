@@ -1,9 +1,8 @@
 import { useState } from "react";
-import RecommendedShow from "./RecommendedShow"
+import RecommendedShow from "./RecommendedShow";
 
 const RecommendedShowList = () => {
-
-  // state 
+  // state
   const [recommendedShows, setRecommendedShows] = useState([
     {
       id: 567346574,
@@ -38,7 +37,7 @@ const RecommendedShowList = () => {
   ]);
 
   // conditional rendering outside JSX
-  if (recommendedShows && recommendedShows.length === 0) { 
+  if (recommendedShows && recommendedShows.length === 0) {
     return (
       <div className="alert alert-warning">
         Sorry! Unable to find any recommended shows. Please try again later.
@@ -46,21 +45,20 @@ const RecommendedShowList = () => {
     );
   }
 
-  // event handler function
+  // event handler function 
   const handleManageWatchlist = (index: number) => {
-    console.log(index);
-    // updating the state immutably
     const duplicateShows = [
       ...recommendedShows
-    ]
-    duplicateShows[index].isInWatchlist = !duplicateShows[index].isInWatchlist;
+    ];
     
-    // update the state -- specifically the isInWatchlist property
-    setRecommendedShows([...duplicateShows]);
-  }
+    // update the state -- specifically the isInWatchlist property 
+    duplicateShows[index].isInWatchlist = !duplicateShows[index].isInWatchlist;
+    setRecommendedShows(duplicateShows);
+  };
 
   return (
     <div className="row">
+      
       {/* Lists & Keys  */}
       {recommendedShows.map((show, index) => {
         console.log("rendering");
@@ -74,9 +72,8 @@ const RecommendedShowList = () => {
           </div>
         );
       })}
-     
     </div>
   );
-}
+};
 
-export default RecommendedShowList
+export default RecommendedShowList;
