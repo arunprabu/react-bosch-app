@@ -3,11 +3,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
+import { IEmployee } from "../../models/IEmployee";
+
 const AddEmployee = () => {
-  const { register, handleSubmit} = useForm();
-  const [isSaved, setIsSaved] = useState(false);
-  const [isError, setIsError] = useState(false);
-  
+  const { register, handleSubmit } = useForm<IEmployee>();
+  const [isSaved, setIsSaved] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
+
   const onAddEmployeeSubmit = (formData: any) => {
     console.log(formData);
     // send the above formData to the REST API
@@ -17,8 +19,10 @@ const AddEmployee = () => {
       3. What's the REST API Client? fetch API (part of JS), axios (npm i axios)
     */
 
-    axios.post("https://jsonplaceholder.typicode.com/users", formData)
-      .then((res: any) => { // upon successful response -- then will be called
+    axios
+      .post("https://jsonplaceholder.typicode.com/users", formData)
+      .then((res: any) => {
+        // upon successful response -- then will be called
         console.log(res);
         setIsSaved(true);
       })
@@ -27,9 +31,9 @@ const AddEmployee = () => {
         setIsError(true);
       })
       .finally(() => {
-        console.log('It is over!');
+        console.log("It is over!");
       });
-  }
+  };
 
   return (
     <div>
@@ -61,7 +65,7 @@ const AddEmployee = () => {
           </label>
           <div className="col-sm-10">
             <input
-              type="text"
+              type="number"
               id="phoneInput"
               className="form-control"
               {...register("phone")}

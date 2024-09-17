@@ -1,6 +1,11 @@
 import { useState } from "react";
 import TrendingShow from "./TrendingShow";
 
+interface Show {
+  title: string;
+  description: string;
+}
+
 const TrendingShowList = () => {
   /* States
    * component-wide updateable data
@@ -8,8 +13,8 @@ const TrendingShowList = () => {
    * the component will re-render and show the updated data in UI
    * never update the state directly; instead use setter function
    */
-  const [resolution, setResolution] = useState("HD");
-  const [trendingShows, setTrendingShows] = useState([
+  const [resolution, setResolution] = useState<string>("HD");
+  const [trendingShows, setTrendingShows] = useState<Show[]>([
     {
       title: "The Godfather",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nihil adipisci perferendis unde architecto quisquam blanditiis commodi",

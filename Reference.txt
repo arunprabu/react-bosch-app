@@ -266,7 +266,7 @@ CRUD App
 
   * Update Employee [TODO]
       localhost:3000/employee-manager/32456   (Bootstrap Modal) -- or else 
-      localhost:3000/employee-manager/32456/edit   (Bootstrap Modal)
+      localhost:3000/employee-manager/32456/edit  
 
       HTTP Method: PUT / PATCH 
   
