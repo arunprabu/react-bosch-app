@@ -95,7 +95,7 @@ const EmployeeManagerPage = () => {
                   <h6 className="card-subtitle mb-2 text-body-secondary">
                     {employee.email}
                   </h6>
-                  <Link to={"/employee-manager/1"} className="card-link">
+                  <Link to={`/employee-manager/${employee.id}`} className="card-link">
                     View Details
                   </Link>
                 </div>

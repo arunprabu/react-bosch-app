@@ -8,11 +8,19 @@
 
 import { Link } from "react-router-dom";
 import MenuList from "./MenuList";
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
 // Functional Component with Named Function
 function Header() {
   const appName = "React Bosch App";
-  
+
+  const cartContext = useContext(CartContext);
+  if(!cartContext){
+    throw new Error("cartContext is not defined");
+  }
+  const { cartItems } = cartContext;
+
   // must return JSX
   return (
     <header>
@@ -34,6 +42,9 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
+            <button className="btn btn-danger me-2">
+              Cart({cartItems.length})
+            </button>
             <button className="btn btn-warning">Login</button>
           </div>
         </div>

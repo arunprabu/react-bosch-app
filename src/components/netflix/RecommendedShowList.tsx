@@ -45,20 +45,17 @@ const RecommendedShowList = () => {
     );
   }
 
-  // event handler function 
+  // event handler function
   const handleManageWatchlist = (index: number) => {
-    const duplicateShows = [
-      ...recommendedShows
-    ];
-    
-    // update the state -- specifically the isInWatchlist property 
+    const duplicateShows = [...recommendedShows];
+
+    // update the state -- specifically the isInWatchlist property
     duplicateShows[index].isInWatchlist = !duplicateShows[index].isInWatchlist;
     setRecommendedShows(duplicateShows);
   };
 
   return (
     <div className="row">
-      
       {/* Lists & Keys  */}
       {recommendedShows.map((show, index) => {
         console.log("rendering");

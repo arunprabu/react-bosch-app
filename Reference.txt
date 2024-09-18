@@ -155,6 +155,7 @@ Project Structure
     components/
     pages/
       Home.tsx
+    models/
     App.tsx 
     App.css 
     App.test.tsx 
@@ -167,7 +168,7 @@ Limitations of JSX
   1. JSX elements must be closed. either with a self-closing tag or with a closing tag.
   2. JSX elements can't have class attribute. replace it with className.
   3. JSX elements can have style attribute with objects in styles 
-
+  4. JSX expressions must have one parent element. use Fragment instead
 
 
 Core Concepts of ReactJS
@@ -240,25 +241,27 @@ Cross Component Communication
 Demo of Styles 
 ------
   * external styles [DONE]
-  * internal styles 
-  * inline styles
+  * internal styles [DONE]
+  * inline styles [DONE]
+  * CSS Modules [DONE]
+  * SCSS [DONE]
 
-Demo Two Way Binding 
+Demo Two Way Binding [DONE]
 -----
   * controlled component -- 
 
 
 CRUD App
 ----
-  * Add Employee
+  * Add Employee [ DONE]
       localhost:3000/employee-manager/add
       HTTP Method: POST
 
-  * List Employees
+  * List Employees [ DONE]
       localhost:3000/employee-manager/
       HTTP Method: GET
 
-  * Employee Details
+  * Employee Details [DONE]
       localhost:3000/employee-manager/1
       localhost:3000/employee-manager/32456
 
@@ -273,3 +276,13 @@ CRUD App
   * Delete Employee [TODO]
       localhost:3000/employee-manager/32456/   (Bootstrap Modal)
       HTTP Method: DELETE
+
+==========
+
+
+Context API 
+------
+  * createContext 
+  * pass the data through the context (ContextProvider)
+  * access the context data in any component using useContext 
+

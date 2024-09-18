@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const ContactPage = () => {
-  const [userName, setUserName] = useState<string>("");
+  const [userName, setUserName] = useState<string>("arun");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value); // entered form input data
