@@ -1,4 +1,11 @@
-const AboutPage = () => {
+import Bye from "../components/about/Bye";
+import Hello from "../components/about/Hello";
+import applyStyles from "../hoc/applyStyles";
+
+const StyledHello = applyStyles(Hello);
+const StyledBye = applyStyles(Bye);
+
+const AboutPage = (props: any) => {
   // Internal Styles
   const myButtonStyle = {
     color: "#fff",
@@ -30,7 +37,13 @@ const AboutPage = () => {
         <button style={myButtonStyle}>Subscibe Monthly Plan</button>
         <button style={myButtonStyle}>Subscribe Annual Plan</button>
       </div>
-      <div>testing</div>
+
+      <StyledHello />
+
+      <StyledBye />
+
+      <h3>Demo'ing Runtime Error</h3>
+      <button onClick={props.x()}>Click Me</button>
     </>
   );
 };

@@ -300,7 +300,6 @@ Hooks in React (15 hooks)
     4. Never call hooks in nested functions, arrow functions, callbacks or try/catch/finally blocks.  
 
 
-
   * useState 
   * useEffect
   * useContext
@@ -315,7 +314,7 @@ Custom Hooks
   * useForm from react-hook-form
 
 
-TodosPage 
+TodosPage  [DONE]
 ----
   * add todo 
   * list todos
@@ -335,7 +334,13 @@ What's Reducer?
     return state;
   }
 
+Higher order components
+---
+  * a higher-order component is a function that takes a component and returns a new component.
 
+Debugging
+---
+  
 
 
 Authentication
