@@ -248,7 +248,10 @@ Demo of Styles
 
 Demo Two Way Binding [DONE]
 -----
-  * controlled component -- 
+  * controlled component --   
+      * known as input form element whose value is controlled by React is called a "controlled component".
+  * uncontrolled component --
+      * known as input form element whose value is not controlled by React is called an "uncontrolled component".
 
 
 CRUD App
@@ -280,9 +283,59 @@ CRUD App
 ==========
 
 
-Context API 
+Context API [DONE]
 ------
   * createContext 
   * pass the data through the context (ContextProvider)
   * access the context data in any component using useContext 
 
+====
+Hooks in React (15 hooks)
+-----
+  Rules of Hooks 
+  --- 
+    1. Call hooks in functional components only 
+    2. Only call Hooks at the top level 
+    3. Never calls hook in conditional statements, if/else, switch/case, loops, 
+    4. Never call hooks in nested functions, arrow functions, callbacks or try/catch/finally blocks.  
+
+
+
+  * useState 
+  * useEffect
+  * useContext
+  * useReducer 
+  * useRef 
+  * useCallback vs useMemo
+
+
+Custom Hooks
+---
+  * useParams from react-router-dom
+  * useForm from react-hook-form
+
+
+TodosPage 
+----
+  * add todo 
+  * list todos
+  (you can try the following features)
+  * mark todo as complete
+  * delete todo 
+  * archive todo
+  * filter / search todos
+
+
+What's Reducer?
+----
+  * Reducer is a function that takes in two arguments: state and action
+  * the function must return updated state 
+
+  function todoReducer(state, action) {
+    return state;
+  }
+
+
+
+
+Authentication

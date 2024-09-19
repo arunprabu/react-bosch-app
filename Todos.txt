@@ -1,12 +1,12 @@
 1. Learn about integrating bootstrap in create-react-app (cra) based app. [DONE]
-2. Implement active menu in MenuList component 
+2. Implement active menu in MenuList component (Do not use Link tag use something else)
 3. Implement page title. use react-helmet-async to implement. 
 4. Implement SCSS in create-react-app (cra) based app.
 5. In Add Employee, Implement Validations (Will review it on Thursday)
   * disable submit button until all the fields are filled.
   * show error messages for each field.
   * disable the submit button after the form is submitted, until the response comes. show the lable as "submitting...
-6. Learn about Nested Routing and implement it in About Page (Will review it on Thursday)
+6. Learn about Nested Routing and implement it in About Page (Will review it on Friday)
     urls: 
       localhost:3000/company
       localhost:3000/company/leadership/
