@@ -19,40 +19,47 @@ import ContactPage from './pages/ContactPage';
 import AddEmployee from './components/employee-manager/AddEmployee';
 import EmployeeDetails from './components/employee-manager/EmployeeDetails';
 import { CartContextProvider } from './contexts/CartContext';
+import { ErrorBoundary } from 'react-error-boundary';
 
 // component defn
 function App() {
   // must return JSX
   return (
     <BrowserRouter>
-  
       <CartContextProvider>
-
         <Header></Header>
         <main className="container mt-5 pt-2">
-          {/* configure the routes -- but */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/netflix" element={<NetflixPage />} />
-            {/* Learn about Nested Routing and implement */}
-            <Route
-              path="/employee-manager/"
-              element={<EmployeeManagerPage />}
-            />
-            <Route path="/employee-manager/add" element={<AddEmployee />} />
-            {/* Dynamic Routing --- url param is employeeId */}
-            <Route
-              path="/employee-manager/:employeeId"
-              element={<EmployeeDetails />}
-            />
+          <ErrorBoundary
+            fallback={
+              <div className="alert alert-danger">
+                Something went wrong! Try again later!
+              </div>
+            }
+          >
+            {/* configure the routes */}
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/netflix" element={<NetflixPage />} />
+              {/* Learn about Nested Routing and implement */}
+              <Route
+                path="/employee-manager/"
+                element={<EmployeeManagerPage />}
+              />
+              <Route path="/employee-manager/add" element={<AddEmployee />} />
+              {/* Dynamic Routing --- url param is employeeId */}
+              <Route
+                path="/employee-manager/:employeeId"
+                element={<EmployeeDetails />}
+              />
 
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/todos" element={<TodosPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path="/todos" element={<TodosPage />} />
+              
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </ErrorBoundary>
         </main>
-        
       </CartContextProvider>
 
       <Footer />

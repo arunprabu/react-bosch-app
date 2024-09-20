@@ -340,6 +340,9 @@ Higher order components
 
 Debugging
 ---
+  * Compilation Error
+  * Runtime Error
+  * Error boundary
   
 
 

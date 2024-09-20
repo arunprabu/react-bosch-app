@@ -1,7 +1,7 @@
 import { useState } from "react";
 import RecommendedShow from "./RecommendedShow";
 
-const RecommendedShowList = () => {
+const RecommendedShowList = (props: any) => {
   // state
   const [recommendedShows, setRecommendedShows] = useState([
     {
@@ -69,6 +69,9 @@ const RecommendedShowList = () => {
           </div>
         );
       })}
+
+      {/* To see the error boundary in action - uncomment the below line */}
+      {/* <button onClick={props.x()}>Click Me</button> */}
     </div>
   );
 };

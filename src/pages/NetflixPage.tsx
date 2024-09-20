@@ -1,3 +1,4 @@
+import { ErrorBoundary } from "react-error-boundary";
 import LatestShowList from "../components/netflix/LatestShowList";
 import RecommendedShowList from "../components/netflix/RecommendedShowList";
 import TrendingShowList from "../components/netflix/TrendingShowList";
@@ -25,8 +26,19 @@ const NetflixPage = () => {
 
       <div className="mt-5 pt-2">
         <hr />
-        <h2>Recommended Shows | States, Events, Conditional Rendering, Lists & Keys Demo</h2>
-        <RecommendedShowList />
+        <h2>
+          Recommended Shows | States, Events, Conditional Rendering, Lists &
+          Keys Demo
+        </h2>
+        <ErrorBoundary
+          fallback={
+            <div className="alert alert-danger">
+              Something went wrong! Try again later!
+            </div>
+          }
+        >
+          <RecommendedShowList />
+        </ErrorBoundary>
       </div>
     </div>
   );
