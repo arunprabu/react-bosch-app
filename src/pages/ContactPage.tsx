@@ -1,8 +1,10 @@
 import { useState } from "react";
-import MyFragment from "../utils/MyFragment"; // refer this later
+import MyFragment from "../components/shared/MyFragment"; // refer this later
+import { useOnlineStatus } from "../hooks/useOnlineStatus";
 
 const ContactPage = () => {
   const [userName, setUserName] = useState<string>("");
+  const isOnline = useOnlineStatus();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value); // entered form input data
@@ -24,7 +26,16 @@ const ContactPage = () => {
         <input type="text" value={userName} onChange={handleChange} />
       </div>
       <div>
-        <h2>another div</h2>
+        <h2>Is the user online?</h2>
+        <p>{isOnline ? "Yes" : "No"}</p>
+        {
+          !isOnline && (
+            <div className="alert alert-warning">
+              Seems like you are not connected to internet. Attempting to
+              connect...
+            </div>
+          )
+        }
       </div>
     </MyFragment>
   );
