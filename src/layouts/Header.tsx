@@ -45,7 +45,8 @@ function Header() {
             <button className="btn btn-danger me-2">
               Cart({cartItems.length})
             </button>
-            <button className="btn btn-warning">Login</button>
+            <button className="btn btn-warning me-2">Signup</button>
+            <Link className="btn btn-warning" to={'/auth/login'}>Login</Link>
           </div>
         </div>
       </nav>

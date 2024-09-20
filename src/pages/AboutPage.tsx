@@ -42,8 +42,8 @@ const AboutPage = (props: any) => {
 
       <StyledBye />
 
-      <h3>Demo'ing Runtime Error</h3>
-      <button onClick={props.x()}>Click Me</button>
+      {/* <h3>Demo'ing Runtime Error</h3>
+      <button onClick={props.x()}>Click Me</button> */}
     </>
   );
 };
