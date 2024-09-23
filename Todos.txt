@@ -17,7 +17,7 @@
 9. Connect to fakestoreapi.com and implement the following features
   * List Products Page 
 10. Implement Programmatic Routing in Home Page and for signup
-11. Work on Signup 
+11. Work on Signup [After we complete our own REST API] 
 
 
 
